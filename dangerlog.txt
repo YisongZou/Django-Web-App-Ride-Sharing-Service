@@ -1,0 +1,39 @@
+Danger Log
+
+01/29:
+Problem:Password will be saved in plain text, what if a malicious
+adversary get into our database and steal our passwords.  
+Solution:Use a hash function: hashlib.md5( ) to store our passwords.
+
+02/01:
+Problem:Remaining size could be smaller than 0.
+Solution:We add judgements before we allow the users to request
+or share the ride.
+
+Problem:The forms can be submitted if nothing was input or miss
+some inputs, and this will cause an error.
+Solution:We added a attribute in our html forms input:
+required=“required”, in this way we can solve this problem.
+
+02/02:
+Problem:Request a ride could request a ride before current time.
+This will be ridiculous.
+Solution:We added a function in views.py which will not allow our
+user to request a ride before the current time.
+
+02/05:
+Problem:A ride that has expired its arrival time can be still searched
+out by a sharer.
+Solution:We added a function in views.py which will not allow our
+sharer to search a ride that has expired its arrival time.
+
+02/07:
+Problem:The whole project should  better not be stored in a single docker.
+Solution:We still need to take more 568 courses to find out the solutions
+to this problem.
+
+Problem:Our cookies session were stored in the local computer, what if our
+user is using a public computer, when he forget to logout, the user data will
+be stored in the computer will lead to risk. 
+Solution:We haven’t solve this problem yet, but we believe that base on further
+study, we will find a better solutions to this problem.
